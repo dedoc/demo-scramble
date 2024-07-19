@@ -42,6 +42,11 @@ class BookingsController extends Controller
             'date' => $request->get('date'),
         ]);
 
+        /**
+         * The created booking.
+         *
+         * @status 201
+         */
         return BookingResource::make($booking);
     }
 

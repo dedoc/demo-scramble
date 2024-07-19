@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78be9172b78f1d7c5d7e3f2d93cb7aea",
+    "content-hash": "6620e1236aa705d364c868e179d308ff",
     "packages": [
         {
             "name": "brick/math",
@@ -137,16 +137,16 @@
         },
         {
             "name": "dedoc/scramble",
-            "version": "v0.11.4",
+            "version": "v0.11.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dedoc/scramble.git",
-                "reference": "5b3afc166eed3e4143b9cc4e5e330ebf50117dff"
+                "reference": "60596e901915f63c2ba911f6df6ca4db9a93f6d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dedoc/scramble/zipball/5b3afc166eed3e4143b9cc4e5e330ebf50117dff",
-                "reference": "5b3afc166eed3e4143b9cc4e5e330ebf50117dff",
+                "url": "https://api.github.com/repos/dedoc/scramble/zipball/60596e901915f63c2ba911f6df6ca4db9a93f6d6",
+                "reference": "60596e901915f63c2ba911f6df6ca4db9a93f6d6",
                 "shasum": ""
             },
             "require": {
@@ -199,7 +199,7 @@
             ],
             "support": {
                 "issues": "https://github.com/dedoc/scramble/issues",
-                "source": "https://github.com/dedoc/scramble/tree/v0.11.4"
+                "source": "https://github.com/dedoc/scramble/tree/v0.11.5"
             },
             "funding": [
                 {
@@ -207,7 +207,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-12T14:14:29+00:00"
+            "time": "2024-07-19T09:05:49+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

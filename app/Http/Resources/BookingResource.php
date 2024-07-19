@@ -11,8 +11,17 @@ class BookingResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            /**
+             * The place where the booking is made.
+             */
             'place_id' => $this->place_id,
+            /**
+             * The user who made the booking.
+             */
             'user_id' => $this->user_id,
+            /**
+             * The date of the booking.
+             */
             'date' => $this->date,
         ];
     }

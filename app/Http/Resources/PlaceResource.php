@@ -11,7 +11,13 @@ class PlaceResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            /**
+             * The name of the place.
+             */
             'name' => $this->name,
+            /**
+             * The price of the place.
+             */
             'price' => $this->price,
         ];
     }
