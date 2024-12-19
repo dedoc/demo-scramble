@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6620e1236aa705d364c868e179d308ff",
+    "content-hash": "66bd0462e41e1f98aed239e8d8ec564f",
     "packages": [
         {
             "name": "brick/math",
@@ -137,23 +137,24 @@
         },
         {
             "name": "dedoc/scramble",
-            "version": "v0.11.5",
+            "version": "v0.11.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dedoc/scramble.git",
-                "reference": "60596e901915f63c2ba911f6df6ca4db9a93f6d6"
+                "reference": "43d8f7573e83d8dbf080bc76a9f11cfd0318ad74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dedoc/scramble/zipball/60596e901915f63c2ba911f6df6ca4db9a93f6d6",
-                "reference": "60596e901915f63c2ba911f6df6ca4db9a93f6d6",
+                "url": "https://api.github.com/repos/dedoc/scramble/zipball/43d8f7573e83d8dbf080bc76a9f11cfd0318ad74",
+                "reference": "43d8f7573e83d8dbf080bc76a9f11cfd0318ad74",
                 "shasum": ""
             },
             "require": {
                 "illuminate/contracts": "^10.0|^11.0",
+                "myclabs/deep-copy": "^1.12",
                 "nikic/php-parser": "^5.0",
                 "php": "^8.1",
-                "phpstan/phpdoc-parser": "^1.0",
+                "phpstan/phpdoc-parser": "^1.0|^2.0",
                 "spatie/laravel-package-tools": "^1.9.2"
             },
             "require-dev": {
@@ -199,7 +200,7 @@
             ],
             "support": {
                 "issues": "https://github.com/dedoc/scramble/issues",
-                "source": "https://github.com/dedoc/scramble/tree/v0.11.5"
+                "source": "https://github.com/dedoc/scramble/tree/v0.11.30"
             },
             "funding": [
                 {
@@ -207,7 +208,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-07-19T09:05:49+00:00"
+            "time": "2024-12-05T11:24:58+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -2054,6 +2055,66 @@
                 }
             ],
             "time": "2024-06-28T09:40:51+00:00"
+        },
+        {
+            "name": "myclabs/deep-copy",
+            "version": "1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/myclabs/DeepCopy.git",
+                "reference": "3a6b9a42cd8f8771bd4295d13e1423fa7f3d942c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3a6b9a42cd8f8771bd4295d13e1423fa7f3d942c",
+                "reference": "3a6b9a42cd8f8771bd4295d13e1423fa7f3d942c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "conflict": {
+                "doctrine/collections": "<1.6.8",
+                "doctrine/common": "<2.13.3 || >=3 <3.2.2"
+            },
+            "require-dev": {
+                "doctrine/collections": "^1.6.8",
+                "doctrine/common": "^2.13.3 || ^3.2.2",
+                "phpspec/prophecy": "^1.10",
+                "phpunit/phpunit": "^7.5.20 || ^8.5.23 || ^9.5.13"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/DeepCopy/deep_copy.php"
+                ],
+                "psr-4": {
+                    "DeepCopy\\": "src/DeepCopy/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Create deep copies (clones) of your objects",
+            "keywords": [
+                "clone",
+                "copy",
+                "duplicate",
+                "object",
+                "object graph"
+            ],
+            "support": {
+                "issues": "https://github.com/myclabs/DeepCopy/issues",
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.12.0"
+            },
+            "funding": [
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/myclabs/deep-copy",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-06-12T14:39:25+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -6322,66 +6383,6 @@
             "time": "2024-05-16T03:13:13+00:00"
         },
         {
-            "name": "myclabs/deep-copy",
-            "version": "1.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "3a6b9a42cd8f8771bd4295d13e1423fa7f3d942c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3a6b9a42cd8f8771bd4295d13e1423fa7f3d942c",
-                "reference": "3a6b9a42cd8f8771bd4295d13e1423fa7f3d942c",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 || ^8.0"
-            },
-            "conflict": {
-                "doctrine/collections": "<1.6.8",
-                "doctrine/common": "<2.13.3 || >=3 <3.2.2"
-            },
-            "require-dev": {
-                "doctrine/collections": "^1.6.8",
-                "doctrine/common": "^2.13.3 || ^3.2.2",
-                "phpspec/prophecy": "^1.10",
-                "phpunit/phpunit": "^7.5.20 || ^8.5.23 || ^9.5.13"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "src/DeepCopy/deep_copy.php"
-                ],
-                "psr-4": {
-                    "DeepCopy\\": "src/DeepCopy/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Create deep copies (clones) of your objects",
-            "keywords": [
-                "clone",
-                "copy",
-                "duplicate",
-                "object",
-                "object graph"
-            ],
-            "support": {
-                "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.12.0"
-            },
-            "funding": [
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/myclabs/deep-copy",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-06-12T14:39:25+00:00"
-        },
-        {
             "name": "nunomaduro/collision",
             "version": "v8.1.1",
             "source": {
@@ -8073,5 +8074,5 @@
         "php": "^8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.3.0"
 }

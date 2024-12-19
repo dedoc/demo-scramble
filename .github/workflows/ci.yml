@@ -1,0 +1,38 @@
+on: push
+name: CI
+permissions:
+  contents: write
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    container:
+      image: kirschbaumdevelopment/laravel-test-runner:8.2
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+          ref: ${{ github.ref_name }}
+
+      - name: Install composer dependencies
+        run: |
+          composer install --no-scripts
+
+      - name: Prepare Laravel Application
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+          php artisan migrate
+
+      - name: Run Testsuite
+        run: vendor/bin/phpunit tests/
+
+      - name: Generate and commit API specification
+        run:  |
+          php artisan scramble:export
+          git config --global --add safe.directory '*'
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'githubactions@users.noreply.github.com'
+          git add api.json
+          git commit -m "API spec update"
+          git push
