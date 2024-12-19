@@ -1,5 +1,7 @@
 on: push
 name: CI
+permissions:
+  contents: write
 jobs:
   phpunit:
     runs-on: ubuntu-latest
@@ -22,3 +24,12 @@ jobs:
 
       - name: Run Testsuite
         run: vendor/bin/phpunit tests/
+
+      - name: Generate and commit API specification
+        run:  |
+          php artisan scramble:export
+          git config --global user.name 'CI'
+          git config --global user.email 'ci@users.noreply.github.com'
+          git add api.json
+          git commit -m "API spec update"
+          git push
