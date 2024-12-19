@@ -29,6 +29,7 @@ jobs:
       - name: Generate and commit API specification
         run:  |
           php artisan scramble:export
+          git config --global --add safe.directory '*'
           git config --global user.name 'CI'
           git config --global user.email 'ci@users.noreply.github.com'
           git add api.json
