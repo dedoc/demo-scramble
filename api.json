@@ -512,7 +512,7 @@
                     },
                     "user_id": {
                         "type": "integer",
-                        "description": "The user who made the booking."
+                        "description": "The ID of the user who made the booking."
                     },
                     "date": {
                         "type": "string",
